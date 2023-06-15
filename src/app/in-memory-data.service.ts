@@ -8,15 +8,15 @@ import { Dog } from './types';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const dogs: Dog[] = [
-      { id: 1, name: 'Dr. Nice', img: '/assets/dog-1.jpg' },
-      { id: 2, name: 'Bombasto', img: '/assets/dog-2.jpg'  },
-      { id: 3, name: 'Celeritas', img: '/assets/dog-3.jpg'  },
-      { id: 4, name: 'Magneta', img: '/assets/dog-4.jpg'  },
-      { id: 5, name: 'RubberMan', img: '/assets/dog-1.jpg'  },
-      { id: 6, name: 'Dynama', img: '/assets/dog-2.jpg'  },
-      { id: 7, name: 'Dr. IQ', img: '/assets/dog-3.jpg'  },
-      { id: 8, name: 'Magma', img: '/assets/dog-4.jpg'  },
-      { id: 9, name: 'Tornado', img: '/assets/dog-1.jpg'  }
+      { id: 1, name: 'Dr. Nice', img: '/assets/dog-1.jpg', isEditing: false, updatedName: '' },
+      { id: 2, name: 'Bombasto', img: '/assets/dog-2.jpg', isEditing: false, updatedName: '' },
+      { id: 3, name: 'Celeritas', img: '/assets/dog-3.jpg', isEditing: false, updatedName: '' },
+      { id: 4, name: 'Magneta', img: '/assets/dog-4.jpg', isEditing: false, updatedName: '' },
+      { id: 5, name: 'RubberMan', img: '/assets/dog-1.jpg', isEditing: false, updatedName: '' },
+      { id: 6, name: 'Dynama', img: '/assets/dog-2.jpg', isEditing: false, updatedName: '' },
+      { id: 7, name: 'Dr. IQ', img: '/assets/dog-3.jpg', isEditing: false, updatedName: '' },
+      { id: 8, name: 'Magma', img: '/assets/dog-4.jpg', isEditing: false, updatedName: '' },
+      { id: 9, name: 'Tornado', img: '/assets/dog-1.jpg', isEditing: false, updatedName: '' }
     ];
     return { dogs };
   }

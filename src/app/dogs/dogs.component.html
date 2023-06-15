@@ -1,1 +1,19 @@
-<h1>Dogs component</h1>
+<div class="dog-carousel">
+    <div *ngFor="let dog of dogs" class="dog-card">
+      <div class="dog-image">
+        <img [src]="dog.img" alt="{{ dog.name }}" />
+      </div>
+      <div class="dog-info">
+        <h3 *ngIf="!dog.isEditing">{{ dog.name }}</h3>
+        <input *ngIf="dog.isEditing" [(ngModel)]="dog.updatedName" />
+        <div class="button-container">
+          <button class="update-button" (click)="toggleEditMode(dog)" *ngIf="!dog.isEditing">
+            Modifier
+          </button>
+          <button *ngIf="dog.isEditing" class="save-button" (click)="saveDogName(dog)">Enregistrer</button>
+          <button class="delete-button" (click)="deleteDog(dog.id)">Supprimer</button>
+        </div>
+      </div>
+    </div>
+</div>
+  
